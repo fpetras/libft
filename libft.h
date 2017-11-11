@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 08:33:21 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/09 10:52:56 by fpetras          ###   ########.fr       */
+/*   Updated: 2017/11/11 07:56:48 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,5 +85,12 @@ void				ft_lstdel(t_list **alst, void (*del)(void *, size_t));
 void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+int					ft_abs(int i);
+int					ft_isspace(int c);
+int					ft_isupper(int c);
+int					ft_islower(int c);
+char				*ft_itoa_base(int value, int base);
+size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 
 #endif
