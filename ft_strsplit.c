@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 12:38:30 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/09 15:15:56 by fpetras          ###   ########.fr       */
+/*   Updated: 2017/11/10 12:09:45 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ static int	ft_len(char const *s, char c)
 	int i;
 
 	i = 0;
-	while (s[i] != c)
+	while (s[i] != '\0' && s[i] != c)
 		i++;
 	return (i);
 }
@@ -56,7 +56,7 @@ static char	**ft_split(char const *s, char c, size_t i, size_t j)
 			k = 0;
 			if (!(tab[j] = (char*)malloc(sizeof(char) * ft_len(&s[i], c) + 1)))
 				return (NULL);
-			while (s[i] != c)
+			while (s[i] != '\0' && s[i] != c)
 				tab[j][k++] = s[i++];
 			tab[j][k] = '\0';
 			j++;
@@ -75,5 +75,7 @@ char		**ft_strsplit(char const *s, char c)
 	i = 0;
 	j = 0;
 	k = 0;
+	if (!s)
+		return (NULL);
 	return (ft_split(s, c, i, j));
 }
