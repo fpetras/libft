@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 08:40:03 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/08 08:42:07 by fpetras          ###   ########.fr       */
+/*   Updated: 2017/11/10 12:06:49 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
+	if (!s1 || !s2)
+		return (0);
 	if (!ft_strcmp(s1, s2))
 		return (1);
 	return (0);
