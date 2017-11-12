@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:07 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/11 19:11:16 by fpetras          ###   ########.fr       */
+/*   Updated: 2017/11/12 10:53:44 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 		link->content_size = 0;
 		return (link);
 	}
-	link->content = ft_memalloc(content_size);
+	link->content = (t_list*)malloc(sizeof(t_list) * content_size);
+	if (link->content == NULL)
+		return (NULL);
 	link->content = ft_memcpy(link->content, content, content_size);
 	link->content_size = content_size;
 	return (link);
