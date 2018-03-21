@@ -1,20 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:17:09 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/12 19:42:42 by fpetras          ###   ########.fr       */
+/*   Created: 2017/11/16 08:19:40 by fpetras           #+#    #+#             */
+/*   Updated: 2017/12/14 13:35:45 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef GET_NEXT_LINE_H
+# define GET_NEXT_LINE_H
 
-int		ft_isupper(int c)
-{
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
-}
+# include "../libft.h"
+# include <sys/types.h>
+# include <sys/uio.h>
+
+# define BUFF_SIZE	32
+# define MAX_FD		4865
+
+int		get_next_line(const int fd, char **line);
+
+#endif

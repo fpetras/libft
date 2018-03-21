@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_wcslen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:17:09 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/12 19:42:42 by fpetras          ###   ########.fr       */
+/*   Created: 2017/12/11 10:07:36 by fpetras           #+#    #+#             */
+/*   Updated: 2017/12/11 11:01:43 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isupper(int c)
+size_t	ft_wcslen(const wchar_t *s)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
+	size_t len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	return (len);
 }

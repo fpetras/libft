@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 08:33:21 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/11 07:56:48 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/03/11 09:03:37 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <string.h>
+# include <wchar.h>
 
 typedef struct		s_list
 {
@@ -87,10 +88,19 @@ void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 int					ft_abs(int i);
+void				ft_swap(int *a, int *b);
+void				ft_putwchar(wchar_t c);
+void				ft_putwcs(const wchar_t *s);
+size_t				ft_wcslen(const wchar_t *s);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
 int					ft_islower(int c);
 char				*ft_itoa_base(int value, int base);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
+size_t				ft_strcspn(const char *s, const char *charset);
+long				ft_atol(const char *str);
+long long			ft_atoll(const char *str);
+
+int					get_next_line(const int fd, char **line);
 
 #endif

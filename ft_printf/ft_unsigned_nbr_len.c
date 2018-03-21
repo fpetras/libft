@@ -1,20 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_unsigned_nbr_len.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:17:09 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/12 19:42:42 by fpetras          ###   ########.fr       */
+/*   Created: 2017/12/05 09:38:26 by fpetras           #+#    #+#             */
+/*   Updated: 2017/12/18 13:59:56 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-int		ft_isupper(int c)
+int		ft_unsigned_nbr_len(uintmax_t value, int base)
 {
-	if (c >= 'A' && c <= 'Z')
+	int		i;
+
+	i = 0;
+	if (value == 0)
 		return (1);
-	return (0);
+	while (value > 0)
+	{
+		value /= base;
+		i++;
+	}
+	return (i);
 }

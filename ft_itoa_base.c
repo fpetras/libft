@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 07:29:30 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/11 09:00:09 by fpetras          ###   ########.fr       */
+/*   Updated: 2017/12/04 11:42:11 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ static char	*itoa_base(int value, int base, int len, int n)
 		len--;
 		value /= base;
 	}
+	free(radix);
 	return (result);
 }
 

@@ -1,20 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isupper.c                                       :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/10 19:17:09 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/12 19:42:42 by fpetras          ###   ########.fr       */
+/*   Created: 2017/11/07 15:49:44 by fpetras           #+#    #+#             */
+/*   Updated: 2018/03/11 08:43:12 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isupper(int c)
+long	ft_atol(const char *str)
 {
-	if (c >= 'A' && c <= 'Z')
-		return (1);
-	return (0);
+	size_t	i;
+	long	n;
+	long	result;
+
+	i = 0;
+	n = 1;
+	result = 0;
+	while (ft_isspace(str[i]))
+		i++;
+	if (str[i] == '-')
+	{
+		n = -1;
+		i++;
+	}
+	else if (str[i] == '+')
+		i++;
+	while (str[i] >= '0' && str[i] <= '9' && str[i] != '\0')
+	{
+		result *= 10;
+		result += str[i] - 48;
+		i++;
+	}
+	return (result * n);
 }

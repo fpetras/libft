@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/09 10:12:07 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/12 10:53:44 by fpetras          ###   ########.fr       */
+/*   Updated: 2017/11/12 19:43:37 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ t_list	*ft_lstnew(void const *content, size_t content_size)
 	link = (t_list*)malloc(sizeof(t_list));
 	if (link == NULL)
 		return (NULL);
+	link->next = NULL;
 	if (content == NULL)
 	{
 		link->content = NULL;
