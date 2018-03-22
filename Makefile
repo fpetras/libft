@@ -6,7 +6,7 @@
 #    By: fpetras <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 08:34:49 by fpetras           #+#    #+#              #
-#    Updated: 2018/03/11 08:46:01 by fpetras          ###   ########.fr        #
+#    Updated: 2018/03/22 12:07:20 by fpetras          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -84,6 +84,7 @@ LIBFT_SRC =			ft_memset.c \
 					ft_itoa_base.c \
 					ft_strlcpy.c \
 					ft_strcspn.c \
+					ft_strreplace.c \
 					ft_atol.c \
 					ft_atoll.c
 

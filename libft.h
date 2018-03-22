@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 08:33:21 by fpetras           #+#    #+#             */
-/*   Updated: 2018/03/11 09:03:37 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/03/22 12:08:22 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,6 +98,7 @@ int					ft_islower(int c);
 char				*ft_itoa_base(int value, int base);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strcspn(const char *s, const char *charset);
+char				*ft_strreplace(char *search, char *replace, char *subject);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
 
