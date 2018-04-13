@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 08:33:21 by fpetras           #+#    #+#             */
-/*   Updated: 2018/03/22 12:08:22 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/04/13 17:14:18 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ size_t				ft_strcspn(const char *s, const char *charset);
 char				*ft_strreplace(char *search, char *replace, char *subject);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
+int					ft_strcasecmp(const char *s1, const char *s2);
 
 int					get_next_line(const int fd, char **line);
 

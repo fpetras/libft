@@ -6,7 +6,7 @@
 #    By: fpetras <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 08:34:49 by fpetras           #+#    #+#              #
-#    Updated: 2018/03/22 12:07:20 by fpetras          ###   ########.fr        #
+#    Updated: 2018/04/13 17:13:41 by fpetras          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,8 @@ LIBFT_SRC =			ft_memset.c \
 					ft_strcspn.c \
 					ft_strreplace.c \
 					ft_atol.c \
-					ft_atoll.c
+					ft_atoll.c \
+					ft_strcasecmp.c
 
 GET_NEXT_LINE_SRC =	get_next_line/get_next_line.c
 
