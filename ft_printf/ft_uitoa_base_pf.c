@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 07:29:30 by fpetras           #+#    #+#             */
-/*   Updated: 2017/12/18 13:59:43 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/04/23 14:12:35 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,10 @@ int			ft_uitoa_base_pf(int fd, uintmax_t value, int base, char x)
 	value2 = value;
 	while (value2 /= base)
 		len++;
-	if (x == 'X')
-		radix = ft_strdup("0123456789ABCDEF");
-	else
-		radix = ft_strdup("0123456789abcdef");
-	result = (char*)malloc(sizeof(char) * (len + 1));
+	if ((result = (char*)malloc(sizeof(char) * (len + 1))) == NULL)
+		return (0);
+	radix = (x == 'X') ?
+		ft_strdup("0123456789ABCDEF") : ft_strdup("0123456789abcdef");
 	result[len] = '\0';
 	while (len-- > 0)
 	{

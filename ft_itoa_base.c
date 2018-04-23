@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 07:29:30 by fpetras           #+#    #+#             */
-/*   Updated: 2017/12/04 11:42:11 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/04/23 12:38:56 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,10 @@ static char	*itoa_base(int value, int base, int len, int n)
 	radix = ft_strdup("0123456789ABCDEF");
 	result = (char*)malloc(sizeof(char) * (len + n + 1));
 	if (result == NULL)
+	{
+		free(radix);
 		return (NULL);
+	}
 	if (n == 1)
 	{
 		result[0] = '-';

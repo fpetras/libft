@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:49:44 by fpetras           #+#    #+#             */
-/*   Updated: 2018/03/11 08:45:01 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/04/23 12:35:10 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ long long	ft_atoll(const char *str)
 	long long	n;
 	long long	result;
 
+	if (!str)
+		return (0);
 	i = 0;
 	n = 1;
 	result = 0;

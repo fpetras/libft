@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 15:49:44 by fpetras           #+#    #+#             */
-/*   Updated: 2017/11/10 11:29:49 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/04/23 12:34:51 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ int		ft_atoi(const char *str)
 	int		n;
 	int		result;
 
+	if (!str)
+		return (0);
 	i = 0;
 	n = 1;
 	result = 0;

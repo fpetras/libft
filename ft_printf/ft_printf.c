@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 07:45:42 by fpetras           #+#    #+#             */
-/*   Updated: 2017/12/14 09:29:43 by fpetras          ###   ########.fr       */
+/*   Updated: 2018/04/23 13:51:25 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 
 static t_struct	*ft_init_struct(t_struct *f)
 {
-	f = ft_memalloc(sizeof(t_struct));
+	if ((f = (t_struct*)ft_memalloc(sizeof(t_struct))) == NULL)
+		return (NULL);
 	f->i = 0;
 	f->len = 0;
 	return (f);
@@ -27,7 +28,8 @@ int				ft_dprintf(int fd, const char *format, ...)
 	va_list		ap;
 
 	f = NULL;
-	f = ft_init_struct(f);
+	if ((f = ft_init_struct(f)) == NULL)
+		return (-1);
 	f->fd = fd;
 	va_start(ap, format);
 	if (format[0] == '%' && format[1] == '\0')
@@ -49,7 +51,8 @@ int				ft_printf(const char *format, ...)
 	va_list		ap;
 
 	f = NULL;
-	f = ft_init_struct(f);
+	if ((f = ft_init_struct(f)) == NULL)
+		return (-1);
 	f->fd = 1;
 	va_start(ap, format);
 	if (format[0] == '%' && format[1] == '\0')
