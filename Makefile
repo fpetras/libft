@@ -6,7 +6,7 @@
 #    By: fpetras <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/11/07 08:34:49 by fpetras           #+#    #+#              #
-#    Updated: 2018/04/24 11:52:36 by fpetras          ###   ########.fr        #
+#    Updated: 2019/04/10 12:01:23 by fpetras          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,9 +17,9 @@ LIBFT_SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 			ft_strlen.c ft_strdup.c ft_strcpy.c ft_strncpy.c ft_strlcpy.c \
 			ft_strcat.c ft_strncat.c ft_strlcat.c \
 			ft_strchr.c ft_strrchr.c ft_strstr.c ft_strnstr.c ft_strcspn.c \
-			ft_strcmp.c ft_strncmp.c ft_strcasecmp.c \
+			ft_strcmp.c ft_strncmp.c ft_strcasecmp.c ft_strncasecmp.c \
 			ft_atoi.c ft_atol.c ft_atoll.c \
-			ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c \
+			ft_isalpha.c ft_isdigit.c ft_isxdigit.c ft_isalnum.c ft_isascii.c \
 			ft_isprint.c ft_isspace.c ft_isupper.c ft_islower.c \
 			ft_toupper.c ft_tolower.c \
 			\
@@ -37,7 +37,10 @@ LIBFT_SRC = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c \
 			ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 			\
 			ft_abs.c \
-			ft_swap.c
+			ft_swap.c \
+			ft_calloc.c \
+			\
+			ft_strupr.c ft_strlwr.c
 
 GET_NEXT_LINE_PATH = get_next_line/
 GET_NEXT_LINE_SRC =	get_next_line.c
@@ -68,7 +71,8 @@ CLEAR_LINE = \033[2K\c
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	@echo "\nCreating $@"
+	@echo "$(CLEAR_LINE)"
+	@echo "Creating $@"
 	@ar rc $(NAME) $(OBJ)
 	@ranlib $(NAME)
 

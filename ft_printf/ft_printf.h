@@ -6,7 +6,7 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/03 07:42:38 by fpetras           #+#    #+#             */
-/*   Updated: 2017/12/14 09:52:43 by fpetras          ###   ########.fr       */
+/*   Updated: 2019/04/03 11:15:51 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include "../libft.h"
 # include <stdarg.h>
+# include <inttypes.h>
 # include <wchar.h>
 
 # define H	1

@@ -6,12 +6,15 @@
 /*   By: fpetras <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 08:33:21 by fpetras           #+#    #+#             */
-/*   Updated: 2018/04/13 17:14:18 by fpetras          ###   ########.fr       */
+/*   Updated: 2019/04/10 12:01:08 by fpetras          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+
+# include "ft_printf/ft_printf.h"
+# include "get_next_line/get_next_line.h"
 
 # include <unistd.h>
 # include <stdlib.h>
@@ -49,6 +52,7 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *str);
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
+int					ft_isxdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
@@ -102,6 +106,10 @@ char				*ft_strreplace(char *search, char *replace, char *subject);
 long				ft_atol(const char *str);
 long long			ft_atoll(const char *str);
 int					ft_strcasecmp(const char *s1, const char *s2);
+int					ft_strncasecmp(const char *s1, const char *s2, size_t n);
+char				*ft_strupr(char *s);
+char				*ft_strlwr(char *s);
+void				*ft_calloc(size_t count, size_t size);
 
 int					get_next_line(const int fd, char **line);
 
